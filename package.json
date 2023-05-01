@@ -1,0 +1,47 @@
+{
+  "name": "webuicypress",
+  "version": "1.0.0",
+  "description": "web ui automation using cypress typescript bdd",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cypress/webpack-preprocessor": "^5.17.0",
+    "@types/jasmine": "^4.3.1",
+    "cypress": "^12.10.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-log-to-output": "^1.1.2",
+    "cypress-terminal-report": "^5.1.1",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.17.18",
+    "jasmine-core": "^4.6.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-jasmine": "^5.1.0",
+    "karma-webpack": "^5.0.0",
+    "multiple-cucumber-html-reporter": "^3.3.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.80.0",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      "cypress/e2e/steps/**/*.ts"
+    ],
+    "html": {
+      "enabled": true
+    }
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.3",
+    "@cypress/xpath": "^2.0.3",
+    "tsify": "^5.0.4"
+  }
+}
